@@ -13,8 +13,9 @@ struct TitleBarView: View {
     
     var body: some View {
         Text(title)
-            .font(.title2)
-            .foregroundStyle(Color("Primary"))
+            .font(.title)
+            .fontWeight(.bold)
+            .foregroundStyle(Color(.white))
     }
 }
 

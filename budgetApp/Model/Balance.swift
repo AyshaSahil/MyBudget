@@ -8,16 +8,15 @@
 import Foundation
 
 
-struct Balance: Decodable, Identifiable {
+struct Balance: Decodable {
     
-    var id: Int?
-    var year: Int?
-    var month: String?
-    var spentAmount: Double?
-    var standardAmount: Double?
+    var Year: Int?
+    var Month: String?
+    var SpentAmount: Double?
+    var BudgetedAmount: Double?
 
     enum CodingKeys: String, CodingKey {
-        case id, year, month, spentAmount, standardAmount
+        case Year, Month, SpentAmount, BudgetedAmount
     }
     
 }

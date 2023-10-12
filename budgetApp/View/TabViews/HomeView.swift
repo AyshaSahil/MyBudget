@@ -10,33 +10,64 @@ import SwiftUI
 struct HomeView: View {
     
     @ObservedObject var homeViewModel = HomeViewModel()
+    
+    var speed = 0.25
+    let gradient = Gradient(colors: [.green, .orange, .pink, .red])
 
     var body: some View {
-    
-        VStack{
+        
+        ZStack{
             
-            TitleBarView(title: "Home")
-            
-            ScrollView{
-                HStack{
-                    Text("Month: \(homeViewModel.balance.month ?? "")")
-                    Spacer()
-                    Text("Year: \(String(homeViewModel.balance.year ?? 2022))")
-                }
-                .padding()
+            Rectangle()
                 .foregroundColor(Color("Primary"))
-                
-                ChartsView()
-                
-                CustomLabelView(labelText: "Money Spent: ", valueText: String(homeViewModel.balance.spentAmount ?? 0.0))
-                
-                CustomLabelView(labelText: "Balance Remaining: ", valueText: String(homeViewModel.getBalanceRemaining()))
-            }
+                .ignoresSafeArea()
             
+            VStack(spacing: 20){
+                
+                TitleBarView(title: "Home")
+                
+                ScrollView{
+                    HStack{
+                        Text(homeViewModel.balance.Month ?? "")
+                            .font(.title2)
+                            .fontWeight(.medium)
+                        Spacer()
+                        Text("Year: \(String(homeViewModel.balance.Year ?? 2022))")
+                            .font(.title2)
+                            .fontWeight(.medium)
+                    }
+                    .padding(.top, 20)
+                    .padding(.horizontal, 20)
+                    
+                    
+                    if #available(iOS 17.0, *) {
+                        ChartsView()
+                            .padding(.horizontal, 80)
+                    }
+                    
+                    
+                    HStack(spacing: 20){
+                        CustomLabelView(labelText: "Spent", valueText: String(homeViewModel.balance.SpentAmount ?? 0.0))
+                        CustomLabelView(labelText: "Balance", valueText: String(homeViewModel.getBalanceRemaining()))
+                    }
+                    .padding()
+                    .padding(.top, 20)
+                    
+                    Gauge(value: speed) {
+                        Text("Expense")
+                    }
+                    .padding()
+                    .tint(gradient)
+                }
+                .background(.white)
+                
+                
+            }
         }
         .onAppear {
             homeViewModel.getCurrentBalance()
         }
+        
     }
 }
 

@@ -10,30 +10,35 @@ import Charts
 
 struct ChartsView: View {
     
-    private var coffeeSales = [
-        (name: "Americano", count: 120),
-        (name: "Cappuccino", count: 234),
-        (name: "Espresso", count: 62),
-        (name: "Latte", count: 625),
-        (name: "Mocha", count: 320),
-        (name: "Affogato", count: 50)
+    private var items = [
+        (name: "Rent", count: 1750),
+        (name: "Transportation", count: 700),
+        (name: "Grocery", count: 500),
+        (name: "Electricity", count: 750),
+        (name: "EMI", count: 2750)
     ]
-    
+
     var body: some View {
-        Chart{
-            ForEach(coffeeSales, id: \.name) { coffee in
-            if #available(iOS 17.0, *) {
-                
-                    
+        if #available(iOS 17.0, *) {
+            Chart {
+                ForEach (items, id: \.name) { element in
                     SectorMark(
-                        angle: .value("Cup", coffee.count)
+                        angle: .value("Money Spent", element.count),
+                        innerRadius: .ratio(0.5),
+                        angularInset: 1.5
                     )
-                    .foregroundStyle(by: .value("Type", coffee.name))
-                } 
-                else {
-                    // Fallback on earlier versions
+                    .cornerRadius(1.5)
+                    .foregroundStyle(by: .value("name", element.name))
+                    .annotation(position: .overlay) {                        Text("\(element.count)")
+                            .font(.headline)
+                            .foregroundStyle(.white)
+                    }
+                    
                 }
-                }
+            }
+            .frame(height: 320)
+        }else {
+            Text("test")
         }
            
     }

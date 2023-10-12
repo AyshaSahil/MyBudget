@@ -25,18 +25,17 @@ class HomeViewModel: ObservableObject {
         let currentMonth = dateFormatter.string(from: now)
         let currentYear = Calendar.current.component(.year, from: now)
         
-        homeData.month = currentMonth
-        homeData.year = currentYear
+        homeData.Month = currentMonth
+        homeData.Year = currentYear
         
         //get Data for the current year and month
-        homeData.id = 1
-        homeData.spentAmount = 2000.00
-        homeData.standardAmount = 10000.00
+        homeData.SpentAmount = 2000.00
+        homeData.BudgetedAmount = 10000.00
         
     }
     
     func getBalanceRemaining() -> Double {
-        guard let stdAmount = homeData.standardAmount, let spent = homeData.spentAmount else { return 0.0 }
+        guard let stdAmount = homeData.BudgetedAmount, let spent = homeData.SpentAmount else { return 0.0 }
         return stdAmount - spent
     }
     
