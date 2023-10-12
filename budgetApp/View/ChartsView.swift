@@ -10,22 +10,32 @@ import Charts
 
 struct ChartsView: View {
     
-    
-    var data: [(type: String, amount: Double)] {
-            [(type: "Spent", amount: 2000),
-             (type: "Available", amount: 10000) ] }
+    private var coffeeSales = [
+        (name: "Americano", count: 120),
+        (name: "Cappuccino", count: 234),
+        (name: "Espresso", count: 62),
+        (name: "Latte", count: 625),
+        (name: "Mocha", count: 320),
+        (name: "Affogato", count: 50)
+    ]
     
     var body: some View {
         Chart{
-            ForEach(data, id: \.type) { item in
-                if #available(iOS 17.0, *) {
-                    SectorMark(angle: .value(item.type, item.amount))
-                } else {
+            ForEach(coffeeSales, id: \.name) { coffee in
+            if #available(iOS 17.0, *) {
+                
+                    
+                    SectorMark(
+                        angle: .value("Cup", coffee.count)
+                    )
+                    .foregroundStyle(by: .value("Type", coffee.name))
+                } 
+                else {
                     // Fallback on earlier versions
                 }
-                   }
-            
+                }
         }
+           
     }
 }
 
