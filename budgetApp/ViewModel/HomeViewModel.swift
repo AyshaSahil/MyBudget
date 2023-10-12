@@ -35,4 +35,9 @@ class HomeViewModel: ObservableObject {
         
     }
     
+    func getBalanceRemaining() -> Double {
+        guard let stdAmount = homeData.standardAmount, let spent = homeData.spentAmount else { return 0.0 }
+        return stdAmount - spent
+    }
+    
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDBDE4C02AD7923300F3CBE9 /* CustomLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBDE4BF2AD7923300F3CBE9 /* CustomLabelView.swift */; };
+		BDBDE4C22AD792DB00F3CBE9 /* TitleBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBDE4C12AD792DB00F3CBE9 /* TitleBarView.swift */; };
 		C87942752AD68DE100924AA2 /* budgetAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87942742AD68DE100924AA2 /* budgetAppApp.swift */; };
 		C87942772AD68DE100924AA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87942762AD68DE100924AA2 /* ContentView.swift */; };
 		C87942792AD68DE300924AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C87942782AD68DE300924AA2 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BDBDE4BF2AD7923300F3CBE9 /* CustomLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabelView.swift; sourceTree = "<group>"; };
+		BDBDE4C12AD792DB00F3CBE9 /* TitleBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarView.swift; sourceTree = "<group>"; };
 		C87942712AD68DE100924AA2 /* budgetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = budgetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C87942742AD68DE100924AA2 /* budgetAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = budgetAppApp.swift; sourceTree = "<group>"; };
 		C87942762AD68DE100924AA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 			children = (
 				C879428F2AD6998700924AA2 /* TabViews */,
 				C87942922AD69CF400924AA2 /* ChartsView.swift */,
+				BDBDE4BF2AD7923300F3CBE9 /* CustomLabelView.swift */,
+				BDBDE4C12AD792DB00F3CBE9 /* TitleBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,11 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDBDE4C02AD7923300F3CBE9 /* CustomLabelView.swift in Sources */,
 				C87942832AD68E4C00924AA2 /* HomeView.swift in Sources */,
 				C87942772AD68DE100924AA2 /* ContentView.swift in Sources */,
 				C87942932AD69CF400924AA2 /* ChartsView.swift in Sources */,
 				C87942872AD68EFE00924AA2 /* HistoryView.swift in Sources */,
 				C87942912AD699BE00924AA2 /* HomeViewModel.swift in Sources */,
+				BDBDE4C22AD792DB00F3CBE9 /* TitleBarView.swift in Sources */,
 				C87942892AD68F1E00924AA2 /* CustomTabView.swift in Sources */,
 				C87942752AD68DE100924AA2 /* budgetAppApp.swift in Sources */,
 				C879428E2AD6933A00924AA2 /* Balance.swift in Sources */,

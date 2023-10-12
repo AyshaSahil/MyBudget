@@ -14,14 +14,24 @@ struct HomeView: View {
     var body: some View {
     
         VStack{
-            HStack{
-                Text("Month: \(homeViewModel.balance.month ?? "")")
-                Spacer()
-                Text("Year: \(String(homeViewModel.balance.year ?? 2022))")
-            }
-            .padding()
-            .foregroundColor(Color("Primary"))
             
+            TitleBarView(title: "Home")
+            
+            ScrollView{
+                HStack{
+                    Text("Month: \(homeViewModel.balance.month ?? "")")
+                    Spacer()
+                    Text("Year: \(String(homeViewModel.balance.year ?? 2022))")
+                }
+                .padding()
+                .foregroundColor(Color("Primary"))
+                
+                ChartsView()
+                
+                CustomLabelView(labelText: "Money Spent: ", valueText: String(homeViewModel.balance.spentAmount ?? 0.0))
+                
+                CustomLabelView(labelText: "Balance Remaining: ", valueText: String(homeViewModel.getBalanceRemaining()))
+            }
             
         }
         .onAppear {

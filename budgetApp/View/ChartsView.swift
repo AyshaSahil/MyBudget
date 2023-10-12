@@ -16,8 +16,15 @@ struct ChartsView: View {
              (type: "Available", amount: 10000) ] }
     
     var body: some View {
-        ZStack{
-            Text("tset")
+        Chart{
+            ForEach(data, id: \.type) { item in
+                if #available(iOS 17.0, *) {
+                    SectorMark(angle: .value(item.type, item.amount))
+                } else {
+                    // Fallback on earlier versions
+                }
+                   }
+            
         }
     }
 }
