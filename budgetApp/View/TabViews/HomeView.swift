@@ -53,7 +53,7 @@ struct HomeView: View {
                     .padding()
                     .padding(.top, 20)
                     
-                    Gauge(value: speed) {
+                    Gauge(value: homeViewModel.getSpentPercent()) {
                         Text("Expense")
                     }
                     .padding()
@@ -61,11 +61,11 @@ struct HomeView: View {
                 }
                 .background(.white)
                 
-                
             }
         }
         .onAppear {
             homeViewModel.getCurrentBalance()
+            homeViewModel.fetchUser()
         }
         
     }

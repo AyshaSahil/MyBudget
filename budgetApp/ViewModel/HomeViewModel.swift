@@ -7,10 +7,52 @@
 
 import Foundation
 import UIKit
+import FirebaseFirestore
+import FirebaseCore
+
 
 class HomeViewModel: ObservableObject {
     
     @Published private var homeData = Balance()
+    @Published var mainUser: Users?
+    
+    let db = Firestore.firestore()
+    
+    func fetchUser() {
+            db.collection("Users").whereField("UserName", isEqualTo: "Aysha").getDocuments() { (querySnapshot, error) in
+            if let error = error {
+                print("Error getting documents: \(error)")
+            } else {
+                for document in querySnapshot!.documents {
+                let data = document.data()
+                    print(document.data())
+                    do {
+                        let jsonData = try JSONSerialization.data(withJSONObject: data)
+                        let user = try JSONDecoder().decode(Users.self, from: jsonData)
+                        self.mainUser = user
+                    } catch {
+                        print("Error decoding user: \(error)")
+                    }
+                }
+            }
+            return
+        }
+    }
+    
+//    
+//    var user: Users {
+//        self.fetchUser { user in
+//            return user
+//        }
+//    }
+//
+//    var subItems: [SubItems] {
+//        
+//    }
+//    
+//    var mainItems: [MainItem] {
+//        
+//    }
     
     var balance: Balance {
         return homeData
@@ -34,8 +76,14 @@ class HomeViewModel: ObservableObject {
         
     }
     
+    func getSpentPercent() -> Double {
+        guard let stdAmount = mainUser?.Amount, let spent = homeData.SpentAmount else { return 0.0 }
+        let ratio = 1 - (spent/stdAmount)
+        return ratio
+    }
+    
     func getBalanceRemaining() -> Double {
-        guard let stdAmount = homeData.BudgetedAmount, let spent = homeData.SpentAmount else { return 0.0 }
+        guard let stdAmount = mainUser?.Amount, let spent = homeData.SpentAmount else { return 0.0 }
         return stdAmount - spent
     }
     

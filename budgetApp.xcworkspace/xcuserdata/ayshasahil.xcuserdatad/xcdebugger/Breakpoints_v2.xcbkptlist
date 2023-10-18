@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C32748DE-99FE-4467-BC37-C0D3B57B5E05"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4971018-8FE3-4155-9EC4-2FBAC3339093"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "budgetApp/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "getBalanceRemaining()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F4971018-8FE3-4155-9EC4-2FBAC3339093 - 29b53138d780c3e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "budgetApp.HomeViewModel.getBalanceRemaining() -&gt; Swift.Double"
+                  moduleName = "budgetApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayshasahil/Desktop/myProjects/MyBudget/budgetApp/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  uuid = "F4971018-8FE3-4155-9EC4-2FBAC3339093 - 29b53138d780c3e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "budgetApp.HomeViewModel.getBalanceRemaining() -&gt; Swift.Double"
+                  moduleName = "budgetApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayshasahil/Desktop/myProjects/MyBudget/budgetApp/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "F4971018-8FE3-4155-9EC4-2FBAC3339093 - 29b53138d780c3e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "budgetApp.HomeViewModel.getBalanceRemaining() -&gt; Swift.Double"
+                  moduleName = "budgetApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayshasahil/Desktop/myProjects/MyBudget/budgetApp/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "188">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95FE1DB2-195C-4E88-8356-83AAD17AB302"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "budgetApp/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "getSpentPercent()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "95FE1DB2-195C-4E88-8356-83AAD17AB302 - 16183178c65f790e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "budgetApp.HomeViewModel.getSpentPercent() -&gt; Swift.Double"
+                  moduleName = "budgetApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayshasahil/Desktop/myProjects/MyBudget/budgetApp/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "360">
+               </Location>
+               <Location
+                  uuid = "95FE1DB2-195C-4E88-8356-83AAD17AB302 - 16183178c65f790e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "budgetApp.HomeViewModel.getSpentPercent() -&gt; Swift.Double"
+                  moduleName = "budgetApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayshasahil/Desktop/myProjects/MyBudget/budgetApp/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "95FE1DB2-195C-4E88-8356-83AAD17AB302 - 16183178c65f790e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "budgetApp.HomeViewModel.getSpentPercent() -&gt; Swift.Double"
+                  moduleName = "budgetApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayshasahil/Desktop/myProjects/MyBudget/budgetApp/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2BA42234-6FD1-4538-A5C3-B5EC317FDBD4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "budgetApp/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "fetchUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -7,5 +7,6 @@ target 'budgetApp' do
 
   # Pods for budgetApp
   pod 'FirebaseFirestore'
+  pod 'FirebaseFirestoreSwift'
 
 end
